@@ -11,7 +11,7 @@
 
 start(_StartType, _StartArgs) ->
     {ok, [SettingsFile]} = init:get_argument(conf),
-    logger:debug("Settings file: ~p", SettingsFile),
+    logger:notice("Settings file: ~p", SettingsFile),
     myapp_sup:start_link().
 
 stop(_State) ->
